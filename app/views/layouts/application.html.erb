@@ -4,9 +4,10 @@
   <title>Twirl</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style='background: url("/assets/debut_dark.png") repeat scroll 0% 0% transparent;'>
 
 <%= yield %>
 
