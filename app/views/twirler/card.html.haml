@@ -44,24 +44,6 @@
       height: 120px;
     }
 
-    .card, .front, .back {
-      width: 80px;
-      height: 80px;
-      border-radius: 5px;
-    }
-    .front, .back {
-      backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .card {
-      position: absolute;
-      display:inline-block;
-      perspective: 1000;
-      transform-style: preserve-3d;
-    }
     .front {
       z-index: 2;
 
@@ -73,16 +55,4 @@
       background: -ms-linear-gradient(-45deg,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
       background: linear-gradient(135deg,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=1 );
-    }
-    .back {
-      transform: rotateY(180deg);
-      border: solid 1px white;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size:cover;
-    }
-
-    .twirl {
-      transform: rotateY(1980deg);
-      transition: 2s;
     }

@@ -1,3 +1,31 @@
-// Place all the styles related to the twirler controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3";
+
+
+.card, .front, .back {
+  width: 80px;
+  height: 80px;
+  @include border-radius(5px);
+}
+.front, .back {
+  @include backface-visibility(hidden);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card {
+  position: absolute;
+  display:inline-block;
+  @include perspective(1000);
+  @include transform-style(preserve-3d);
+}
+.back {
+  @include rotateY(180deg);
+  border: solid 1px white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+}
+.twirl {
+  @include rotateY(1980deg);
+  @include transition-duration(2s);
+}
