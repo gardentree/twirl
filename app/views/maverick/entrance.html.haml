@@ -1,0 +1,4 @@
+%div{style: 'line-height: 960px;'}
+  = form_tag twirler_card_path,{method: :get} do
+    %div{style: 'width: 480px;margin: 0 auto;'}
+      = text_field_tag :url,nil,placeholder: 'http://www.zusaar.com/event/597003',style: 'width: 100%;'

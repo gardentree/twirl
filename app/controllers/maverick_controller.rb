@@ -1,0 +1,2 @@
+class MaverickController < ApplicationController
+end

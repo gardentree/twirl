@@ -1,3 +1,5 @@
 Twirl::Application.routes.draw do
-  root to: 'twirler#card'
+  root to: 'maverick#entrance'
+
+  get 'twirler/card'
 end
