@@ -1,18 +1,16 @@
-%div{style: 'height:80px;'}
-%div{style: "height:960px;background:url('/assets/pool_table.png') repeat scroll 0% 0% transparent;"}
-  %div{style: 'width:800px;margin:0 auto;'}
-    .cards
+%div{style: 'width:800px;margin:0 auto;'}
+  .cards
+    :ruby
+      unit = 360 / @elements.size
+    - @elements.each_with_index do |image,index|
       :ruby
-        unit = 360 / @elements.size
-      - @elements.each_with_index do |image,index|
-        :ruby
-          radian = Math::PI/180 * (unit * index)
-          x = 400 * Math.sin(radian)
-          y = 400 * Math.cos(radian) * -1
+        radian = Math::PI/180 * (unit * index)
+        x = 400 * Math.sin(radian)
+        y = 400 * Math.cos(radian) * -1
 
-        .card{style: "left: #{x.to_i}px;top: #{y.to_i}px;"}
-          .front{onclick: "twirl.open(this);"}
-          .back{style: "background-image: url(#{image});"}
+      .card{style: "left: #{x.to_i}px;top: #{y.to_i}px;"}
+        .front{onclick: "twirl.open(this);"}
+        .back{style: "background-image: url(#{image});"}
 
 - content_for :head do
   :coffeescript
